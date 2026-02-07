@@ -12,7 +12,7 @@ Ce projet est une implémentation en **Langage C** du célèbre **Chiffre de Cé
 
 ##  Détails Techniques
 L'outil repose sur l'algorithme suivant :
-$$C = (P + K) mod(26)
+           C = (P + K) mod(26)
 
 ##  Compétences Démontrées
 1. **Logique de Programmation :** Manipulation des boucles `for` et des conditions.
