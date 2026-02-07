@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char message[100];
+    int i, key;
+
+    printf("--- Caesar Cipher Encryption Tool ---\n");
+
+    
+    printf("Entrez le message a crypter: ");
+    fgets(message, sizeof(message), stdin);
+
+    
+    printf("Entrez la cle (un nombre entier): ");
+    scanf("%d", &key);
+
+
+    for(i = 0; i < strlen(message); ++i) {
+        char c = message[i];
+
+       
+        if(c >= 'a' && c <= 'z') {
+            c = (c - 'a' + key) % 26 + 'a';
+            message[i] = c;
+        }
+        
+        else if(c >= 'A' && c <= 'Z') {
+            c = (c - 'A' + key) % 26 + 'A';
+            message[i] = c;
+        }
+    }
+
+    printf("\nMessage crypte: %s", message);
+    printf("-------------------------------------\n");
+
+    return 0;
+}
